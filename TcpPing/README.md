@@ -1,7 +1,7 @@
-# Build
+# Build 
 ```
 cd TcpPing
-docker build -t tcpping -f Dockerfile.nano .
+docker build -t tcpping -f [Dockerfile|Dockerfile.nano] .
 ```
 
 # Run
