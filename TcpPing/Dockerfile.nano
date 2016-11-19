@@ -1,0 +1,12 @@
+FROM microsoft/dotnet:1.1.0-sdk-projectjson-nanoserver
+
+EXPOSE 5201
+
+WORKDIR /app
+COPY . .
+
+RUN dotnet restore
+RUN dotnet publish -o /pub -c Release
+
+WORKDIR /pub
+ENTRYPOINT ["dotnet", "app.dll"]
